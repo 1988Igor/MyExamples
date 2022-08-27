@@ -1,4 +1,6 @@
-﻿void Fillnumber (int number1)
+﻿//Показать таблицу квадратов чисел от 1 до N
+
+void Fillnumber (int number1)
 {
 int count  = 1;
 while (count<=number1)
