@@ -1,42 +1,44 @@
 ﻿//Задать массив, заполнить случайными положительными 
 //трёхзначными числами. Показать количество нечетных\четных чисел
-
-
-void FillArray(int[] array )
+void FillArray(int[]array)
 {
-int[] array= new int [12];
-Random rand = new Random();
-
+   for(int i = 0; i<array.Length; i++)
+   {
+      Console.WriteLine("Enter the element of array {i+1}");
+      array[i] = int.Parse(Console.ReadLine()?? "0");
+   }
 }
 
 void PrintArray(int[]array)
 {
-    for (int i = 0; i<array.Length; i++)
-    array[i] = rand.Next(100,150);
-for (i = 0; i<array.Length; i++)
+for(int i = 0; i<array.Length; i++)
 {
-    Console.WriteLine(array[i]);
+   Console.WriteLine($"{array[i]}");
+
 }
+
+
 }
-void Countable_Uncountable(int countable, int uncountable)
+Console.WriteLine("Enter the length of array");
+int length  = int.Parse(Console.ReadLine()?? "0");
+int[] array = new int[length];
+
+FillArray(array);
 {
-for (i = 0; i<array.Length; i++)
+   int countable, uncountable;
+   countable  = uncountable = 0;
+for(int i = 0; i<array.Length; i++)
 
+if (array[i]%2==0)
+countable++;
+else
+uncountable++;
+Console.WriteLine($"The number of countable digit are {countable}");
+Console.WriteLine($"The number of uncountable digit are {uncountable}");
 
+}
+PrintArray(array);
 
-    if(array[i]%2==0)
-    countable++;
-   
-     else
-     uncountable++;
-      
-    Console.WriteLine("The countable elements of array are : " + countable);
-    Console.WriteLine("The uncountable elements of array are : " + uncountable);
-   }
-
-FillArray();
-PrintArray();
-Countable_Uncountable();
 
 //int[]array = {1, -5, -4, 6, 7, -8, 9};
 //int n = array.Length;
@@ -54,7 +56,7 @@ Countable_Uncountable();
 //Console.WriteLine("\n");
 
 
-//int[]array = {1,5,4,6,7,8,9};
+//int[]array = {1,5,4,6,7,8,9}
 //int i = array.Length;
 
 //for(i = 0; i<array.Length; i++)
